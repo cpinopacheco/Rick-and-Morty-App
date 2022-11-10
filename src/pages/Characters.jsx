@@ -1,5 +1,11 @@
+import Search from "../components/Search/Search";
+
 const Characters = () => {
-  return <div>Characters</div>;
+  return (
+    <div>
+      <Search />
+    </div>
+  );
 };
 
 export default Characters;
