@@ -1,0 +1,46 @@
+.header {
+  align-items: center;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.charactersImg {
+  max-width: 150px;
+}
+
+@media (min-width: 576px) {
+  .header {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .logo,
+  .charactersImg {
+    margin: 0 2rem;
+  }
+
+  .logo {
+    max-width: 250px;
+  }
+
+  .charactersImg {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    max-width: 450px;
+  }
+
+  .charactersImg {
+    max-width: 250px;
+  }
+}
