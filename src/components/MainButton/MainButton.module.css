@@ -1,0 +1,23 @@
+.mainButton {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 30px;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  overflow: hidden;
+  padding: 0.5rem 1.8rem;
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.mainButton:hover {
+  box-shadow: 0 0 10px var(--secondary-color), 0 0 25px var(--secondary-color),
+    0 0 50px var(--secondary-color);
+  color: var(--text-color);
+}

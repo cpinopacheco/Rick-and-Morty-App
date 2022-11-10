@@ -5,7 +5,7 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [pageNumber, setPageNumber] = useState(1);
   const [fetchedData, setFetchedData] = useState([]);
-  const { info, results } = fetchedData;
+  const { results } = fetchedData;
   let url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
   const getCharacters = async () => {
@@ -25,7 +25,7 @@ const AppProvider = ({ children }) => {
     getCharacters();
   }, [url]);
 
-  const data = { fetchedData };
+  const data = { results };
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };

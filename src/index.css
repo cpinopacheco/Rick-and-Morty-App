@@ -1,5 +1,7 @@
 :root {
   --primary-color: #00b5cc;
+  --secondary-color: #b2df28;
+  --text-color: #043c48;
 }
 
 *,
@@ -12,4 +14,5 @@
 
 body {
   font-family: "Patrick Hand SC", cursive;
+  color: var(--text-color);
 }
