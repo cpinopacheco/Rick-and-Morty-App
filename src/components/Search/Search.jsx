@@ -9,8 +9,6 @@ const Search = () => {
           placeholder="Busca tú personaje"
           required=""
           type="text"
-          /* value={searchValue} */
-          /* onChange={(e) => setSearchValue(e.target.value)} */
         />
         <button className={styles.reset} type="reset">
           <svg
@@ -20,7 +18,6 @@ const Search = () => {
             viewBox="5 1.5 25 25"
             stroke="currentColor"
             strokeWidth="2"
-            /* onClick={() => setSearchValue("")} */
           >
             <path
               strokeLinecap="round"
@@ -29,7 +26,7 @@ const Search = () => {
             ></path>
           </svg>
         </button>
-        <button /* onClick={(e) => searchGame(e, searchValue)} */>
+        <button>
           <svg
             width="25"
             height="20"
