@@ -1,22 +1,22 @@
 import Card from "../components/Card/Card";
+import Pagination from "../components/Pagination/Pagination";
 import Search from "../components/Search/Search";
 import { useApp } from "../hooks/useApp";
 
 const Characters = () => {
-  const { results } = useApp();
+  const { results, pageNumber, setPageNumber } = useApp();
 
   return (
-    <div>
+    <>
       <Search />
       <div className="container text-center">
         <div className="row">
           {results &&
-            results.map((result) => (
-              <Card key={result.id} result={result}></Card>
-            ))}
+            results.map((result) => <Card key={result.id} result={result} />)}
         </div>
       </div>
-    </div>
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+    </>
   );
 };
 

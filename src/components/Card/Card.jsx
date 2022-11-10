@@ -1,9 +1,7 @@
 import MainButton from "../MainButton/MainButton";
 
 const Card = ({ result }) => {
-  const { name, gender, image, origin, species, status } = result;
-
-  console.log(result);
+  const { name, image, origin } = result;
 
   return (
     <div className="col-12 col-md-6 col-lg-4 col-xxl-3">
@@ -12,7 +10,7 @@ const Card = ({ result }) => {
         <div className="card-body">
           <h4 className="card-title fw-bold">{name}</h4>
           <div className="mb-3">
-            <span class="text-gray fw-semibold">origin:</span>
+            <span className="text-gray fw-semibold">origin:</span>
             <p className="card-text fs-5">{origin.name}</p>
           </div>
           <div className="mt-4 mb-3">
