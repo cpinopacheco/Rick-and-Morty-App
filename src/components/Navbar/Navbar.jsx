@@ -17,8 +17,8 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="d-flex justify-content-center">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="w-100">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
               <li className="nav-item fw-bold fs-4">
                 <Link className="nav-link mx-lg-3" aria-current="page" to="/">
                   Personajes
