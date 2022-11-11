@@ -4,7 +4,7 @@ import Search from "../components/Search/Search";
 import { useApp } from "../hooks/useApp";
 
 const Characters = () => {
-  const { results, pageNumber, setPageNumber } = useApp();
+  const { results } = useApp();
 
   return (
     <>
@@ -15,7 +15,7 @@ const Characters = () => {
             results.map((result) => <Card key={result.id} result={result} />)}
         </div>
       </div>
-      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+      <Pagination />
     </>
   );
 };

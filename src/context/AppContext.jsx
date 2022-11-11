@@ -4,16 +4,17 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [pageNumber, setPageNumber] = useState(1);
+  const [search, setSearch] = useState("");
   const [fetchedData, setFetchedData] = useState([]);
-  const { results } = fetchedData;
-  const url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  const { info, results } = fetchedData;
+  const url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
 
   const getCharacters = async () => {
     try {
       const res = await fetch(url);
       const data = await res.json();
 
-      if (!res.ok) throw new Error("No se pudo obtener los personajes");
+      if (!res.ok) throw new Error("No pudimos obtener lo que buscas");
 
       setFetchedData(data);
     } catch (error) {
@@ -25,7 +26,7 @@ const AppProvider = ({ children }) => {
     getCharacters();
   }, [url]);
 
-  const data = { results, setPageNumber, pageNumber };
+  const data = { results, setPageNumber, pageNumber, setSearch, info };
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };

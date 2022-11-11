@@ -1,7 +1,7 @@
 .containerForm {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 2rem 1rem;
 }
 
@@ -13,49 +13,49 @@
 }
 /* styling of whole input container */
 .form {
+  --after-border-radius: 1px;
+  --border-color: #00b5cc;
+  --border-height: 2px;
+  --border-radius: 30px;
+  --height-of-input: 40px;
+  --input-bg: #dedede;
   --timing: 0.3s;
   --width-of-input: 200px;
-  --height-of-input: 40px;
-  --border-height: 2px;
-  --input-bg: #dedede;
-  --border-color: #00b5cc;
-  --border-radius: 30px;
-  --after-border-radius: 1px;
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  height: var(--height-of-input);
-  display: flex;
   align-items: center;
-  padding-inline: 0.8em;
-  border-radius: var(--border-radius);
-  transition: border-radius 0.5s ease;
   background: var(--input-bg, #fff);
+  border-radius: var(--border-radius);
+  position: relative;
+  display: flex;
+  height: var(--height-of-input);
+  max-width: 500px;
+  padding-inline: 0.8em;
+  transition: border-radius 0.5s ease;
+  width: 100%;
 }
 
 /* styling of Input */
 .input {
-  font-size: 0.9rem;
   background-color: transparent;
-  width: 100%;
+  border: none;
+  font-size: 1.2rem;
   height: 100%;
   padding-inline: 0.5em;
   padding-block: 0.7em;
-  border: none;
+  width: 100%;
 }
 /* styling of animated border */
 .form:before {
   content: "";
-  position: absolute;
   background: var(--border-color);
-  transform: scaleX(0);
-  transform-origin: center;
-  width: 100%;
+  border-radius: 1px;
+  bottom: 0;
   height: var(--border-height);
   left: 0;
-  bottom: 0;
-  border-radius: 1px;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: center;
   transition: transform var(--timing) ease;
+  width: 100%;
 }
 /* Hover on Input */
 .form:focus-within {
@@ -72,8 +72,8 @@ input:focus {
 /* styling of close button */
 /* == you can click the close button to remove text == */
 .reset {
-  border: none;
   background: none;
+  border: none;
   opacity: 0;
   visibility: hidden;
 }

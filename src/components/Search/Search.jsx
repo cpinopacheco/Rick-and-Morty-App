@@ -1,6 +1,18 @@
+import { useApp } from "../../hooks/useApp";
 import styles from "./Search.module.css";
 
 const Search = () => {
+  const { setSearch, setPageNumber } = useApp();
+
+  const handleChange = (e) => {
+    setPageNumber(1);
+    setSearch(e.target.value);
+  };
+
+  const cleanInput = () => {
+    setSearch("");
+  };
+
   return (
     <div className={styles.containerForm}>
       <form className={styles.form}>
@@ -9,8 +21,13 @@ const Search = () => {
           placeholder="Busca tú personaje"
           required=""
           type="text"
+          onChange={(e) => handleChange(e)}
         />
-        <button className={styles.reset} type="reset">
+        <button
+          onClick={() => cleanInput()}
+          className={styles.reset}
+          type="reset"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-6"
@@ -26,7 +43,7 @@ const Search = () => {
             ></path>
           </svg>
         </button>
-        <button>
+        <div>
           <svg
             width="25"
             height="20"
@@ -38,12 +55,12 @@ const Search = () => {
             <path
               d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
               stroke="currentColor"
-              strokeWidth="1.8"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             ></path>
           </svg>
-        </button>
+        </div>
       </form>
     </div>
   );
