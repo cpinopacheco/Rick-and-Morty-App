@@ -1,8 +1,8 @@
-import { useApp } from "../../hooks/useApp";
+import { useCharactersProvider } from "../../hooks/useCharactersProvider";
 import styles from "./Search.module.css";
 
 const Search = () => {
-  const { setSearch, setPageNumber } = useApp();
+  const { setSearch, setPageNumber } = useCharactersProvider();
 
   const handleChange = (e) => {
     setPageNumber(1);
@@ -10,6 +10,7 @@ const Search = () => {
   };
 
   const cleanInput = () => {
+    setPageNumber(1);
     setSearch("");
   };
 

@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
-const AppContext = createContext();
+const CharactersContex = createContext();
 
-const AppProvider = ({ children }) => {
+const CharactersProvider = ({ children }) => {
   const [pageNumber, setPageNumber] = useState(1);
   const [search, setSearch] = useState("");
   const [fetchedData, setFetchedData] = useState([]);
@@ -28,9 +28,13 @@ const AppProvider = ({ children }) => {
 
   const data = { results, setPageNumber, pageNumber, search, setSearch, info };
 
-  return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
+  return (
+    <CharactersContex.Provider value={data}>
+      {children}
+    </CharactersContex.Provider>
+  );
 };
 
-export { AppProvider };
+export { CharactersProvider };
 
-export default AppContext;
+export default CharactersContex;

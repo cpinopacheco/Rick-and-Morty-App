@@ -1,8 +1,8 @@
 import { scrollTop } from "../../helpers/scrollToTop";
-import { useApp } from "../../hooks/useApp";
+import { useCharactersProvider } from "../../hooks/useCharactersProvider";
 
 const Pagination = () => {
-  const { info, pageNumber, setPageNumber } = useApp();
+  const { info, pageNumber, setPageNumber } = useCharactersProvider();
 
   const next = () => {
     setPageNumber((currentValue) => currentValue + 1);
