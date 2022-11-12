@@ -26,7 +26,7 @@ const AppProvider = ({ children }) => {
     getCharacters();
   }, [url]);
 
-  const data = { results, setPageNumber, pageNumber, setSearch, info };
+  const data = { results, setPageNumber, pageNumber, search, setSearch, info };
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };

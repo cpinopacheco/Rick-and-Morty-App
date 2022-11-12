@@ -4,11 +4,17 @@ import Search from "../components/Search/Search";
 import { useApp } from "../hooks/useApp";
 
 const Characters = () => {
-  const { results } = useApp();
+  const { search, info, results } = useApp();
 
   return (
     <>
       <Search />
+      {search && info?.count ? (
+        <p className="text-center fs-4">Personajes encontrados: {info.count}</p>
+      ) : (
+        <p className="text-center fs-4">Cantidad de personajes: {info.count}</p>
+      )}
+
       <div className="container text-center">
         <div className="row">
           {results &&

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -19,25 +19,31 @@ const Navbar = () => {
           <div className="w-100">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
               <li className="nav-item fw-bold fs-4 text-uppercase">
-                <Link
-                  className="nav-link mx-lg-3 text-center"
+                <NavLink
+                  className="nav-link mx-lg-3 p-0 text-center"
                   aria-current="page"
                   to="/"
                 >
                   Personajes
-                </Link>
+                </NavLink>
               </li>
               <hr />
               <li className="nav-item fw-bold fs-4 text-uppercase">
-                <Link className="nav-link mx-lg-3 text-center" to="/chapters">
+                <NavLink
+                  className="nav-link mx-lg-3 p-0 text-center"
+                  to="/chapters"
+                >
                   Episodios
-                </Link>
+                </NavLink>
               </li>
               <hr />
-              <li className="nav-item fw-bold fs-4 text-uppercase text-center">
-                <Link className="nav-link mx-lg-3" to="/favorites">
+              <li className="nav-item fw-bold fs-4 text-uppercase ">
+                <NavLink
+                  className="nav-link mx-lg-3 p-0 text-center"
+                  to="/favorites"
+                >
                   Favoritos
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

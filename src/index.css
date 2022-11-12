@@ -16,3 +16,13 @@ body {
   font-family: "Patrick Hand SC", cursive;
   color: var(--text-color);
 }
+
+.active {
+  color: var(--text-color) !important;
+}
+
+@media (min-width: 992px) {
+  .active {
+    border-bottom: 2px solid var(--text-color);
+  }
+}
