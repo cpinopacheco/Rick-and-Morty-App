@@ -17,6 +17,7 @@ body {
   color: var(--text-color);
 }
 
+/* Sobrescritura clases de bootstrap */
 .active {
   color: var(--text-color) !important;
 }
@@ -25,4 +26,8 @@ body {
   .active {
     border-bottom: 2px solid var(--text-color);
   }
+}
+
+.shadow {
+  box-shadow: 0 8px 16px #00b5cc70 !important;
 }

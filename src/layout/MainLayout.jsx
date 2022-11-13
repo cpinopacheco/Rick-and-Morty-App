@@ -7,7 +7,7 @@ const MainLayout = () => {
     <>
       <Header />
       <Navbar />
-      <main>
+      <main className="mt-5">
         <Outlet />
       </main>
       <footer>Footer</footer>

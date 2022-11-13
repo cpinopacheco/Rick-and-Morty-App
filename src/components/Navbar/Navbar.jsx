@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-info text-dark p-3" id="menu">
+    <nav className="navbar navbar-expand-lg bg-info shadow p-3" id="menu">
       <div className="container justify-content-end">
         <button
           className="navbar-toggler"
