@@ -21,13 +21,9 @@
     justify-content: center;
   }
 
-  .logo,
-  .charactersImg {
-    margin: 0 2rem;
-  }
-
   .logo {
-    max-width: 250px;
+    max-width: 350px;
+    margin-left: 1rem;
   }
 
   .charactersImg {
@@ -42,5 +38,12 @@
 
   .charactersImg {
     max-width: 250px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    max-width: 550px;
+    margin-left: 2rem;
   }
 }

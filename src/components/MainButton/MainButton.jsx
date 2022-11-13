@@ -1,8 +1,13 @@
 import styles from "./MainButton.module.css";
 
-const MainButton = () => {
+const MainButton = ({ id }) => {
   return (
-    <a href="#" className={styles.mainButton}>
+    <a
+      href="#"
+      className={styles.mainButton}
+      data-bs-toggle="modal"
+      data-bs-target={`#id${id}`}
+    >
       Saber más
     </a>
   );

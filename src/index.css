@@ -15,6 +15,7 @@
 body {
   font-family: "Patrick Hand SC", cursive;
   color: var(--text-color);
+  letter-spacing: 1px;
 }
 
 /* Sobrescritura clases de bootstrap */

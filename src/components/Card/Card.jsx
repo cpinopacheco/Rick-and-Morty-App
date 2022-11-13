@@ -1,7 +1,8 @@
 import MainButton from "../MainButton/MainButton";
+import Modal from "../Modal/Modal";
 
 const Card = ({ result }) => {
-  const { name, image, origin } = result;
+  const { id, name, image, origin, gender, species, location, status } = result;
 
   return (
     <div className="col-12 col-md-6 col-lg-4 col-xxl-3">
@@ -14,10 +15,19 @@ const Card = ({ result }) => {
             <p className="card-text fs-5">{origin.name}</p>
           </div>
           <div className="mt-4 mb-3">
-            <MainButton />
+            <MainButton id={id} />
           </div>
         </div>
       </div>
+      <Modal
+        id={`id${id}`}
+        name={name}
+        gender={gender}
+        species={species}
+        image={image}
+        location={location}
+        status={status}
+      />
     </div>
   );
 };
