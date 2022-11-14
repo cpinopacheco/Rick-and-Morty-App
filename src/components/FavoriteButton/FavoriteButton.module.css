@@ -1,0 +1,11 @@
+.favoriteButton {
+  align-items: center;
+  background: #ffffff60;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  padding: 0.3rem;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
