@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 
@@ -7,10 +8,10 @@ const MainLayout = () => {
     <>
       <Header />
       <Navbar />
-      <main className="mt-5">
+      <main className="m-5 min-vh-100">
         <Outlet />
       </main>
-      <footer>Footer</footer>
+      <Footer />
     </>
   );
 };

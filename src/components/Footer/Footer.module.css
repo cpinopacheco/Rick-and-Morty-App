@@ -1,0 +1,95 @@
+.containerFooter {
+  background-color: #303030;
+  color: #fff;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  padding-top: 2rem;
+}
+
+.containerContact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkContact {
+  align-items: center;
+  border: none;
+  color: #fff;
+  display: flex;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.linkContact:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.linkContact::before {
+  content: "";
+  background-color: var(--tertiary-color);
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  position: absolute;
+  transition: 0.4s ease;
+  width: 0;
+}
+
+.linkContact:hover::before {
+  width: 100%;
+}
+
+.linkContact::after {
+  content: "";
+  background-color: var(--tertiary-color);
+  bottom: 0;
+  height: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.4s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.linkContact:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+}
+
+.logo {
+  height: auto;
+  max-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .containerFooter {
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .copyRight {
+    order: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .containerFooter {
+    padding: 3rem 0;
+  }
+
+  .logo {
+    max-width: 230px;
+  }
+}
