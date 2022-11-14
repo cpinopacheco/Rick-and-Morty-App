@@ -3,7 +3,7 @@ import personalLogo from "../../assets/Original.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-info">
+    <footer>
       <div className={styles.containerFooter}>
         <img src={personalLogo} className={styles.logo} alt="logo-personal" />
         <div className={styles.containerContact}>
@@ -22,9 +22,9 @@ const Footer = () => {
             +56 9 57409074
           </a>
         </div>
-        <p className={styles.copyRight}>
-          <small> &copy; Todos los Derechos Reservados</small>
-        </p>
+        <small className={styles.copyRight}>
+          &copy; Todos los Derechos Reservados
+        </small>
       </div>
     </footer>
   );
