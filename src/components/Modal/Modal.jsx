@@ -18,7 +18,7 @@ const Modal = ({ id, name, gender, species, image, location, status }) => {
               aria-label="Close"
             ></button>
           </div>
-          <div className="modal-body d-sm-flex gap-3 px-lg-5">
+          <div className="modal-body d-sm-flex gap-3 px-lg-5 py-4">
             <img src={image} className={styles.modalImage} alt={name} />
 
             <div className="mx-auto">
@@ -51,14 +51,6 @@ const Modal = ({ id, name, gender, species, image, location, status }) => {
                 <span className="fw-semibold">Ubicación: </span> {location.name}
               </p>
             </div>
-          </div>
-          <div className="modal-footer mx-auto">
-            <button
-              type="button"
-              className="btn btn-info text-uppercase py-1 my-2"
-            >
-              Agregar a favoritos
-            </button>
           </div>
         </div>
       </div>

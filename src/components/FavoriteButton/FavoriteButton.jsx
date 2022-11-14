@@ -11,20 +11,32 @@ const FavoriteButton = ({ id }) => {
 
   const handleClick = (id) => {
     setIsFavorite(!isFavorite);
+
     if (idFavoriteCharacters.includes(id)) {
       const filteredFavorites = idFavoriteCharacters.filter(
         (element) => element !== id
       );
       setIdFavoriteCharacters(filteredFavorites);
+
+      //guarda los favoritos filtrados en el localStorage
+      localStorage.setItem("favorites", JSON.stringify(filteredFavorites));
     } else {
       setIdFavoriteCharacters([...idFavoriteCharacters, id]);
+
+      //guarda los nuevos personajes en el localStorage
+      localStorage.setItem(
+        "favorites",
+        JSON.stringify([...idFavoriteCharacters, id])
+      );
     }
   };
 
   return (
     <button onClick={() => handleClick(id)} className={styles.favoriteButton}>
       <img
-        src={isFavorite ? isFavoriteStar : isNotFavoriteStar}
+        src={
+          idFavoriteCharacters.includes(id) ? isFavoriteStar : isNotFavoriteStar
+        }
         alt="favorite-img"
       />
     </button>

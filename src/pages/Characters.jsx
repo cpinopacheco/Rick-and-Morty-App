@@ -20,7 +20,7 @@ const Characters = () => {
           </p>
         ))}
       <div className="container text-center">
-        <div className="row">
+        <div className="row justify-content-center">
           {results &&
             results.map((result) => <Card key={result.id} result={result} />)}
         </div>
