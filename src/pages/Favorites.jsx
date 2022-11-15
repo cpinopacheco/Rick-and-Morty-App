@@ -1,6 +1,7 @@
 import Card from "../components/Card/Card";
 import NoFavorites from "../components/noFavorites/NoFavorites";
 import { useFavoritesProvider } from "../hooks/useFavoritesProvider";
+import rymTerrified from "../assets/rick_morty_error.png";
 
 const Favorites = () => {
   const { favoriteCharacters } = useFavoritesProvider();
@@ -13,7 +14,10 @@ const Favorites = () => {
             <Card key={result.id} result={result} />
           ))
         ) : (
-          <NoFavorites title={"Aún no tienes personajes favoritos"} />
+          <NoFavorites
+            title={"Aún no tienes personajes favoritos"}
+            image={rymTerrified}
+          />
         )}
       </div>
     </div>

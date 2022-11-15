@@ -20,7 +20,7 @@ const MainLayout = () => {
     <>
       <Header />
       <Navbar />
-      <main className="my-5 min-vh-100">
+      <main className="my-5">
         <Outlet />
       </main>
       <Footer />

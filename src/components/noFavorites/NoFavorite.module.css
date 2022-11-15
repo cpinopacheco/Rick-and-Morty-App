@@ -1,0 +1,14 @@
+.container {
+  background-color: #00b5cc50;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 1rem;
+  max-width: 500px;
+  padding: 1rem;
+  text-transform: uppercase;
+  width: 90%;
+}
+
+.img {
+  max-width: 250px;
+}
