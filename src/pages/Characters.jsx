@@ -12,11 +12,13 @@ const Characters = () => {
       {info &&
         (search ? (
           <p className="text-center fs-4">
-            Número de personajes encontrados: {info.count}
+            Número de personajes encontrados:
+            <span className="fw-bold"> {info.count}</span>
           </p>
         ) : (
           <p className="text-center fs-4">
-            Número total de personajes: {info.count}
+            Número total de personajes:
+            <span className="fw-bold"> {info.count}</span>
           </p>
         ))}
       <div className="container text-center">

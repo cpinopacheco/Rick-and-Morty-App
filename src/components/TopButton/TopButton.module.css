@@ -1,6 +1,6 @@
 .topButton {
   background-color: var(--primary-color);
-  border: 3px solid var(--secondary-color);
+  border: none;
   border-radius: 50%;
   bottom: 1rem;
   color: var(--text-color);
@@ -12,4 +12,9 @@
   right: 1rem;
   width: 4rem;
   z-index: 999;
+}
+
+.topButton:hover {
+  box-shadow: 0px 0px 15px var(--secondary-color);
+  transition: box-shadow 0.3s ease-in-out;
 }

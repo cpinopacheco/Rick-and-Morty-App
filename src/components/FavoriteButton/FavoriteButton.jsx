@@ -32,7 +32,10 @@ const FavoriteButton = ({ id }) => {
   };
 
   return (
-    <button onClick={() => handleClick(id)} className={styles.favoriteButton}>
+    <button
+      onClick={() => handleClick(id)}
+      className={`${styles.favoriteButton} animate__animated animate__bounceIn animate__slow`}
+    >
       <img
         src={
           idFavoriteCharacters.includes(id) ? isFavoriteStar : isNotFavoriteStar

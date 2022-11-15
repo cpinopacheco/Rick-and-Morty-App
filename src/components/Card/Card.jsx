@@ -7,7 +7,7 @@ const Card = ({ result }) => {
 
   return (
     <div className="col-12 col-md-6 col-lg-4 col-xxl-3">
-      <div className="card m-3 m-md-2 my-md-3 shadow bg-body rounded position-relative">
+      <div className="card m-3 m-md-2 my-md-3 shadow bg-body rounded position-relative animate__animated animate__fadeIn">
         <img src={image} className="card-img-top" alt={name} />
         <div className="card-body">
           <h4 className="card-title fw-bold">{name}</h4>

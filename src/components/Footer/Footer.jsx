@@ -23,7 +23,7 @@ const Footer = () => {
           </a>
         </div>
         <small className={styles.copyRight}>
-          &copy; Todos los Derechos Reservados
+          &copy; Todos los derechos reservados
         </small>
       </div>
     </footer>
