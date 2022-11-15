@@ -9,14 +9,16 @@ const Chapters = () => {
 
   return (
     <div className="container">
-      <h1 className="text-center">
-        Capítulo {id}: {name === "" ? "Desconocido" : name}
-      </h1>
-      <p className="text-center">
-        Fecha de estreno: {air_date === "" ? "Desconocido" : air_date}
-      </p>
+      <div className="card shadow p-3">
+        <h1 className="text-center">
+          Capítulo {id}: {name === "" ? "Desconocido" : name}
+        </h1>
+        <p className="text-center">
+          Fecha de estreno: {air_date === "" ? "Desconocido" : air_date}
+        </p>
+      </div>
 
-      <div className="col-lg-6 mx-auto mb-4">
+      <div className="col-lg-6 mx-auto my-5">
         <Dropdown setId={setId} total={totalChapters} name="Capitulo" />
       </div>
       <hr />

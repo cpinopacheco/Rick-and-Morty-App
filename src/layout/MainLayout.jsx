@@ -8,8 +8,6 @@ import TopButton from "../components/TopButton/topButton";
 const MainLayout = () => {
   const [viewportHeight, setViewportHeight] = useState(0);
 
-  console.log(viewportHeight);
-
   const handleScroll = () => setViewportHeight(window.pageYOffset);
 
   useEffect(() => {
