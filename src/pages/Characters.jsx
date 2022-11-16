@@ -1,10 +1,11 @@
+import Alert from "../components/Alert/Alert";
 import Card from "../components/Card/Card";
 import Pagination from "../components/Pagination/Pagination";
 import Search from "../components/Search/Search";
 import { useCharactersProvider } from "../hooks/useCharactersProvider";
 
 const Characters = () => {
-  const { search, info, results } = useCharactersProvider();
+  const { search, info, results, alert } = useCharactersProvider();
 
   return (
     <>
@@ -21,6 +22,8 @@ const Characters = () => {
             <span className="fw-bold"> {info.count}</span>
           </p>
         ))}
+      {alert.err && <Alert msg={alert.msg} />}
+
       <div className="container text-center">
         <div className="row justify-content-center">
           {results &&

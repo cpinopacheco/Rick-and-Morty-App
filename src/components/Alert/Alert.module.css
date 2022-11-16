@@ -1,0 +1,23 @@
+.alert {
+  align-items: center;
+  background-color: #dc3545;
+  border-radius: 0.5rem;
+  color: #fff;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 90%;
+}
+
+.content {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .alert {
+    max-width: 500px;
+  }
+}

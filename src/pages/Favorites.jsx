@@ -10,9 +10,15 @@ const Favorites = () => {
     <div className="container text-center">
       <div className="row justify-content-center">
         {favoriteCharacters ? (
-          favoriteCharacters.map((result) => (
-            <Card key={result.id} result={result} />
-          ))
+          <>
+            <p className="text-center fs-4">
+              Personajes favoritos:
+              <span className="fw-bold"> {favoriteCharacters.length}</span>
+            </p>
+            {favoriteCharacters.map((result) => (
+              <Card key={result.id} result={result} />
+            ))}
+          </>
         ) : (
           <NoFavorites
             title={"Aún no tienes personajes favoritos"}
