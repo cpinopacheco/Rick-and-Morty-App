@@ -12,17 +12,20 @@ const Characters = () => {
       <Search />
       {info &&
         (search ? (
-          <p className="text-center fs-4">
-            Número de personajes encontrados:
-            <span className="fw-bold"> {info.count}</span>
-          </p>
+          alert.err ? (
+            <Alert msg={alert.msg} />
+          ) : (
+            <p className="text-center fs-4">
+              Número de personajes encontrados:
+              <span className="fw-bold"> {info.count}</span>
+            </p>
+          )
         ) : (
           <p className="text-center fs-4">
             Número total de personajes:
             <span className="fw-bold"> {info.count}</span>
           </p>
         ))}
-      {alert.err && <Alert msg={alert.msg} />}
 
       <div className="container text-center">
         <div className="row justify-content-center">
